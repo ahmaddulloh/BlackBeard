@@ -15,12 +15,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="assets/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
-
-    <!-- Data Tables -->
     <link rel="stylesheet" href="assets/dist/css/adminlte.min.css">
-    <link rel="stylesheet" href="assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-    <link rel="stylesheet" href="assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -202,7 +197,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="index-dashboard.html" class="nav-link active">
+                            <a href="index_dashboard.html" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -244,7 +239,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="area_parkir_dashboard.html" class="nav-link">
+                            <a href="area_parkir_dashboard.html" class="nav-link active">
                                 <i class="nav-icon fas fa-parking"></i>
                                 <p>
                                     Area Parkir
@@ -274,13 +269,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Dashboard</h1>
+                            <h1 class="m-0">Data Area Parkir</h1>
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="index_dashboard.html">Home</a></li>
-                                <li class="breadcrumb-item active">Dashboard</li>
+                                <li class="breadcrumb-item active">Data Area Parkir</li>
                             </ol>
                         </div>
                         <!-- /.col -->
@@ -295,7 +290,97 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#staticBackdrop">
+                                Form Tambah Area Parkir
+                              </button>
 
+                            <div class="card">
+                                <div class="card-header">
+                                    Data Area Parkir
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    No
+                                                </th>
+                                                <th>
+                                                    Nama Area
+                                                </th>
+                                                <th>
+                                                    Kapasitas
+                                                </th>
+                                                <th>
+                                                    Gedung
+                                                </th>
+                                                <th>
+                                                    action
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    1
+                                                </td>
+                                                <td>
+                                                    Area Depan B2
+                                                </td>
+                                                <td>
+                                                    100
+                                                </td>
+                                                <td>
+                                                    Kampus B2 STT-NF
+                                                </td>
+                                                <td>
+                                                    <a href="#" class="btn btn-warning">Edit</a>
+                                                    <a href="#" class="btn btn-danger">Hapus</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    2
+                                                </td>
+                                                <td>
+                                                    Area Belakang B2
+                                                </td>
+                                                <td>
+                                                    40
+                                                </td>
+                                                <td>
+                                                    Kampus B2 STT-NF
+                                                </td>
+                                                <td>
+                                                    <a href="#" class="btn btn-warning">Edit</a>
+                                                    <a href="#" class="btn btn-danger">Hapus</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="card-footer text-muted">
+                                    <nav aria-label="...">
+                                        <ul class="pagination">
+                                            <li class="page-item disabled">
+                                                <a class="page-link">Previous</a>
+                                            </li>
+                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item" aria-current="page">
+                                                <a class="page-link" href="#">2</a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">Next</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+
+                        </div>
                     </div>
                     <!-- /.row -->
                 </div>
@@ -304,6 +389,57 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Tambah Data Area Parkir</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                          <label for="select" class="col-4 col-form-label">Nama Gedung</label> 
+                          <div class="col-8">
+                            <select id="select" name="select" class="custom-select">
+                              <option value="Kampus B2">------Kampus B2------</option>
+                              <option value="Kampus B2">------Kampus B1------</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="text" class="col-4 col-form-label">Nama Area</label> 
+                          <div class="col-8">
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                  <i class="fas fa-parking"></i>
+                                </div>
+                              </div> 
+                              <input id="text" name="text" placeholder="Masukan Nama Area" type="text" class="form-control">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="numer1" class="col-4 col-form-label">Kasitas</label> 
+                          <div class="col-8">
+                            <input id="numer1" name="numer1" type="number" class="form-control">
+                          </div>
+                        </div> 
+                        <div class="form-group row">
+                          <div class="offset-4 col-8">
+                            <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+                          </div>
+                        </div>
+                      </form>
+                </div>
+            </div>
+            </div>
+        </div>
 
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
@@ -335,20 +471,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="assets/dist/js/adminlte.min.js"></script>
-
-    <!-- DataTables  & Plugins -->
-    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-    <script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-    <script src="../../plugins/jszip/jszip.min.js"></script>
-    <script src="../../plugins/pdfmake/pdfmake.min.js"></script>
-    <script src="../../plugins/pdfmake/vfs_fonts.js"></script>
-    <script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-    <script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
-    <script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 </body>
 
 </html>
